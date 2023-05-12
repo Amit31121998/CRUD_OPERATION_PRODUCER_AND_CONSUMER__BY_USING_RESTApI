@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div class="container">
+		<h3 class="pb-3 tb-3">Get Details By Id</h3>
+		<a href="/">home</a><br> <br>
+		<form th:action="@{/contactid}">
+
+			Enter Contact Id:<input type="text" name="id" /> <br> <input
+				type="Submit" value="Submit" />
+		</form>
+		<form>
+			<table>
+				<tr>
+					<td>ID:</td>
+					<td><p th:text="${contact.id}" /></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td><p th:text="${contact.name}" /></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><p th:text="${contact.email}" /></td>
+				</tr>
+				<tr>
+					<td>PhoneNum:</td>
+					<td><p th:text="${contact.phno}" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

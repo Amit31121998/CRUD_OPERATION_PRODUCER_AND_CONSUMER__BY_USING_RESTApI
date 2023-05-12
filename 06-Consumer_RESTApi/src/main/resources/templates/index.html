@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+		<h3 class="pb-5 tb-5">Enter Contact Details</h3>
+
+	<p th:text="${msg}" class="text-danger"></p>
+	<form th:action="@{/contact}" th:object="${contact}" method="POST">
+		<table>
+
+			<tr>
+				<td>Contact Name:</td>
+				<td><input type="text" th:field="*{name}" /></td>
+			</tr>
+			<tr>
+				<td>Contact Email:</td>
+				<td><input type="text" th:field="*{email}" /></td>
+			</tr>
+			<tr>
+				<td>Contact PhNo:</td>
+				<td><input type="number" th:field="*{phno}" /></td>
+			</tr>
+			<tr>
+				<td><input type="Submit" value="Submit" class="btn btn-success" /></td>
+			</tr>
+		</table>
+	</form><br>
+	<a href="contacts">ViewAllContacts</a>&nbsp; &nbsp; &nbsp; 
+	<a href="viewcontact">GetById</a>
+</div>
+</body>
+</html>
